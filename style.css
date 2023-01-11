@@ -1,0 +1,252 @@
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+}
+.main{
+    width:70%;
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 20px;
+    column-gap: 15px;
+}
+nav{
+    grid-column:1/6 ;
+    display: flex;
+    justify-content: space-between;
+}
+#mylist{
+    display:flex;
+    align-items: center;
+    width: 40%;
+    justify-content: space-between;
+}
+nav ul li{
+    list-style: none;
+    opacity: 70%;
+    font-size: 13px;
+}
+nav button{
+    display: none;
+    background-color: transparent;
+    border-color: transparent;
+}
+nav ul li:hover{
+    color:hsl(5, 85%, 63%);
+}
+.menu_button{
+    display: none;
+}
+section{
+    background-image: url(assets/images/image-web-3-desktop.jpg);
+    background-size: cover;
+    grid-column: 1/4;
+    min-height: 230px;
+    
+}
+
+aside{
+    grid-column: 4/6;
+    grid-row:2/4;
+    background-color: hsl(240, 100%, 5%);
+    display: flex;
+   
+    flex-direction: column;
+    padding:15px 15px;
+
+}
+aside h2{
+    font-size:2rem;
+    color:hsl(35, 77%, 62%);
+}
+.cars>p, .artistry >p, .funding >p {
+    color:hsl(36, 100%, 99%);
+    font-size: 12px;
+    padding-top:5px;
+    font-weight: 400;
+}
+.cars a, .artistry  a , .funding  a {
+    color:hsl(36, 100%, 99%);
+    font-size: 15px;
+    text-decoration: none;
+}
+.cars a:hover, .artistry  a:hover , .funding  a:hover {
+    color:hsl(35, 77%, 62%)
+    
+}
+.cars, .artistry{
+    border-bottom: solid 2px white;
+    padding-bottom:20px;
+}
+.aside_text{
+    margin-top:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+article{
+    grid-column: 1/4;
+    display: flex;
+}
+.heading{
+    width:45%;
+    color:hsl(240, 100%, 5%);
+    
+}
+.announcement{
+    width:  55%;
+    font-size:15px;
+    padding:10px 20px 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.announcement >p{
+    opacity: 70%;
+}
+.announcement button{
+    width: 7em;
+    padding:5px;
+    background-color: hsl(5, 85%, 63%);
+    border-color: transparent;
+    color: hsl(36, 100%, 99%);
+    margin-bottom:10px;
+    cursor: pointer;
+    
+}
+.announcement button:hover{
+    background-color: hsl(240, 100%, 5%);
+}
+article h2{
+    font-size: 2.8rem;
+    line-height: 1;
+}
+footer{
+    grid-column:1/6;
+    display: flex;
+    margin-top:20px;
+}
+.firstfooter, .secondfooter, .thirdfooter{
+    display: flex;
+
+}
+.description{
+    padding-left:10px;
+}
+.description h3{
+    font-size:2rem;
+    color:hsl(233, 8%, 79%);
+}
+.description h4:hover{
+    color:hsl(5, 85%, 63%)
+}
+.description p{
+   opacity:70%;
+   font-size: 13px;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+@media (max-width:767px){
+    
+    .main{
+        width:90%;
+        max-width:300px;
+        margin: auto;
+        position: relative;
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+       
+    }
+    nav{
+        grid-column:1/6;
+        
+    }
+    .logo{
+    align-self: flex-end;
+    }
+    #mylist{
+        position: absolute;
+        width:60%;
+        height:70vh;
+        flex-direction: column;
+        background-color:hsl(230, 23%, 95%);
+        right:0;
+        align-items: flex-start;
+        justify-content: flex-start;
+        display: none;
+        z-index: 1;
+    }
+    nav ul li{
+        justify-content:center;
+        margin-left:10px;
+        padding:20px 0px;
+        font-size: 15px;
+    }
+    .menu_button{
+        display: block;
+    }
+    nav button{
+        display: block;
+        margin-left: 130px;
+        margin-top:30px;
+        
+       
+    }
+    section{
+        background-image: url(assets/images/image-web-3-mobile.jpg);
+        grid-column: 1/6;
+        grid-row:2;
+    }
+    aside{
+        grid-column:1/6;
+        grid-row: 4;
+    }
+    article{
+        grid-column:1/6;
+        flex-direction: column;
+    }
+    .heading{
+        width:100%;
+    }
+    .heading h2{
+        font-size: 2.5rem;
+    }
+    .announcement{
+        width:100%;
+        margin:0;
+        padding:0;
+    }
+    .announcement button{
+        margin-top:15px;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .secondfooter, .thirdfooter{
+        padding-top:20px;
+    }
+    body.dim {
+        background-color: rgba(0, 0, 0, 0.5);
+
+      }
+    
+}
